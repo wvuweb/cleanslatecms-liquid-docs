@@ -1,0 +1,1 @@
+NOTE: The content on this page is purely driven by the YouTube Playlist Player. When videos are created for Liquid, we'll have to modify the YouTube Playlist player template to support switching between Radius and Liquid (tabs?).
