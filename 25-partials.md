@@ -4,7 +4,6 @@ TODO:
 
   * Change CSTDTS YouTube video from the Radius version to Liquid (when it gets made).
   * Fix link to "`render` in the Tag index" to use the Liquid version.
-  * Update radius docs to first FAQ question (new content written below)
 
 <div class="u-embed-container">
   <iframe title="CleanSlate Theme Development Tutorial Series #13: Partials" src="https://www.youtube-nocookie.com/embed/Y_iig89O9fQ" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
