@@ -14,6 +14,8 @@ TODO:
   * Write/fix content for question about pulling blog posts with ALL included labels
   * Wite/fix content for dynamic tags/labels via Custom Data
     * NOTE: Not sure if this is possible yet as it uses get_page + r:articles:each
+  * NOTE: Update 1/15/2021: We can pull blog articles from the same site's blog onto another page via [this code in Liquid](https://gist.github.com/wvuwebgist/d149c22aed588af4a05407832c9e2c5d).
+    * Nathan says there's probably a more efficient way to do this, but this should work as a stopgap.
 
 ## FAQ:
 
