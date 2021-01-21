@@ -67,8 +67,8 @@ If you have a block of content that you need to repeat several times, loops can 
 {% assign items = "foo,bar,baz" | split: "," %}
 <p>Item Count: {{ items.size }}</p>
 {% for item in items %}
-   <p>{{ item }}</p>
+   <p>{{ item }} {{ forloop.index }}</p>
 {% endfor %}
 ```
 
-Read the [Tag Documentation for Loops](https://cleanslatecms.wvu.edu/how-to/theme-development/tag-index/r-loop) for more information.
+Read the [Tag Documentation for Loops](https://cleanslatecms.wvu.edu/how-to/theme-development/tag-index/r-loop) or see what [attributes/methods](https://shopify.dev/docs/themes/liquid/reference/objects/for-loops) are available inside the `forloop` object.
