@@ -4,7 +4,7 @@ Custom page data in Liquid behaves almost identically to how it does in Radiusâ€
 
 Radius: `<r:page:data name="key_1"/>`
 
-Liquid: `{{ page.data.key_1 }}`
+Liquid: `{{ page.data.key_1 }}` OR `{{ page.data["key_1"] }}`
 
 ## Custom site data
 
@@ -12,4 +12,4 @@ Again, custom site data in Liquid behaves almost identically to how it does in R
 
 Radius: `<r:site:data name="site_1" />`
 
-Liquid: `{{ site.data.site_1 }}`
+Liquid: `{{ site.data.site_1 }}` OR `{{ site.data["site_1"] }}`
