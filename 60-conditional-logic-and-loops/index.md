@@ -36,7 +36,28 @@ Also keep in mind, for the time based example above, that the system may cache p
 
 **NOTE:** Variable names in `{% if %}` statements must not contain minus (`-`) characters. Replace minus characters with underscores (`_`) or camelCase variable names to avoid unintended math operations.
 
-Read the [Tag Documentation for Conditional Logic](https://cleanslatecms.wvu.edu/how-to/theme-development/tag-index/r-if-and-r-if-not) for more information.
+### Complex control flow operators
+
+Unlike Radius, Liquid supports complex control flow operators like:
+
+  * `if`
+  * `else`
+  * `elseif`
+  * `unless`
+  * `case`
+  * `when`
+
+These can come in handy and simplify your control flow compared to doing the same operations in Radius. For example:
+
+```
+{% if page.name == "Bears" %}
+  We love bears!
+{% else %}
+  No bears here.
+{% endif %}
+```
+
+Read the [Tag Documentation for Conditional Logic](https://cleanslatecms.wvu.edu/how-to/theme-development/tag-index/r-if-and-r-if-not) on this site or go to the [official Liquid documentation for control flow](https://shopify.github.io/liquid/tags/control-flow/) for more information.
 
 ## Loops
 
