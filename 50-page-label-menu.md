@@ -23,7 +23,7 @@ Use the `<a>` tag with `{{ page.url }}` and `{{ page.name }}` to dynamically cre
 ## Example:
 
 ```
-{% assign pages = site.pages | filter_pages: tags: "name-of-your-label" %}
+{% assign pages = site.pages | filter_pages: labels: "name-of-your-label" %}
 <ul>
   {% for page in pages.all %}
     <li>
