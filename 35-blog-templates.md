@@ -3,19 +3,13 @@
 TODO:
 
   * Change CSTDTS YouTube video from the Radius version to Liquid (when it gets made).
-  * Fix "r:blog tag" to point to a Liquid gist.
-    * NOTE: As of 1/13/2021, a 1:1 conversion of this code is likely not possible in Liquid (due to the r:blog tag).
-  * Gists for featured blog post ("this code in your template")
-    * NOTE: As of 1/13/2021, a 1:1 conversion of this code is likely not possible in Liquid (due to the r:blog tag).
   * Convert "Can I exclude a certain label from a blog feed" to Liquid
-    * NOTE: As of 1/13/2021, a 1:1 conversion of this code is likely not possible in Liquid (due to the r:blog tag).
+    * NOTE: As of 1/13/2021, a 1:1 conversion of this code is likely not possible in Liquid (due to the `labels_op` attribute).
   * Check that `tags: "xyz"` et all is the correct syntax for filtering by specific tags.
     * NOTE: Related to "exclude" and "pull" questions below.
-  * Write/fix content for question about pulling blog posts with ALL included labels
+  * Write/fix content for question about pulling blog posts with ALL included labels (`labels_op`)
   * Wite/fix content for dynamic tags/labels via Custom Data
     * NOTE: Not sure if this is possible yet as it uses get_page + r:articles:each
-  * NOTE: Update 1/15/2021: We can pull blog articles from the same site's blog onto another page via [this code in Liquid](https://gist.github.com/wvuwebgist/d149c22aed588af4a05407832c9e2c5d).
-    * Nathan says there's probably a more efficient way to do this, but this should work as a stopgap.
 
 ## FAQ:
 
@@ -31,7 +25,7 @@ Yes. Say, for example, you had different authors and you wanted a bio to appear 
 
 **How do I pull articles from my blog onto my site's homepage?**
 
-Do this using the [r:blog tag]() by passing it a blog ID. Note: this pulls blog articles from the same site—not from a different site.
+Do this using the [r:blog tag](https://gist.github.com/wvuwebgist/d149c22aed588af4a05407832c9e2c5d) by passing it a blog ID. Note: this pulls blog articles from the same site—not from a different site.
 
 **How do I pull blog articles from a different site?**
 
@@ -43,19 +37,19 @@ Tag a blog article by adding a label to it in Pages. To filter blog posts by tag
 
 **How do I add a featured blog post to my homepage (or another page)?**
 
-You can add a label or multiple labels to a blog post or blog posts using [this code in your template](#). First, change the blog ID. Then, choose which tag(s) you want included via tags="my-tag,my-tag-2". Choose how many posts to display via limit="1". Here's a simplified example if you're looking to break this code down.
+You can add a label or multiple labels to a blog post or blog posts using [this code in your template](https://gist.github.com/wvuwebgist/023a0ef7bd5617bf6cea1b1555b0ab01). First, change the blog ID. Then, choose which tag(s) you want included via `labels: "my-tag,my-tag-2"`. Choose how many posts to display via `limit: "1"`. Here's a [simplified example](https://gist.github.com/wvuwebgist/88de48f8baed233c8ab14637d3c4c834) if you're looking to break this code down.
 
 **Can I exclude a certain label from a blog feed?**
 
-This usually happens if you don’t want your “featured stories” repeated next to your regular blog articles. To exclude a certain label from a list of blog articles, use `tags_op="none" tags="dont-show-stuff-with-this-label"` on the `<r:articles>` tag. Here’s an [exclude label code example](#).
+This usually happens if you don’t want your “featured stories” repeated next to your regular blog articles. To exclude a certain label from a list of blog articles, use `labels_op: "none", labels: "dont-show-stuff-with-this-label"` on the `{% assign articles %}` tag. Here’s an [exclude label code example](#).
 
 **How do I pull articles from multiple tags/labels?**
 
-Where you're referencing `tags: "xyz"`, enter your tags as a comma separated list _without_ spaces. For example: `tags: "history,art,event"`. This could also be: `labels: "history,art,event"`.
+Where you're referencing `labels: "xyz"`, enter your tags/labels as a comma separated list _without_ spaces. For example: `labels: "history,art,event"`. Note: you could also use `tags: "history,art,event"`; however, we recommend using `labels:` as it has better compatability within CleanSlate.
 
 **How do I pull blog posts that include ALL of the included labels?**
 
-On the `<r:articles>` tag, include `tags_op: "all" tags: "admissions,year-2050"`. This will only show blog posts with both `admissions` and `year-2050` labels.
+On the `{% assign articles %}` tag, include `labels_op: "all", labels: "admissions,year-2050"`. This will only show blog posts with both `admissions` and `year-2050` labels.
 
 **Can I pull a list of blog posts onto another page, but have content authors specify which tags/labels to pull via the CleanSlate UI?**
 
