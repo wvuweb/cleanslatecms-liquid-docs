@@ -10,6 +10,8 @@ TODO:
   * Write/fix content for question about pulling blog posts with ALL included labels (`labels_op`)
   * Wite/fix content for dynamic tags/labels via Custom Data
     * NOTE: Not sure if this is possible yet as it uses get_page + r:articles:each
+  * Right now, with blogs, it seems `tags` is the only operator that works (instead of `labels`). What are the chances of making `labels` work in blogs?
+    * TODO: Update blog docs _back_ to `tags` if `labels` will not be included.
 
 ## FAQ:
 
