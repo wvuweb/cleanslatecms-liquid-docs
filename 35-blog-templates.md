@@ -8,8 +8,6 @@ TODO:
   * Check that `tags: "xyz"` et all is the correct syntax for filtering by specific tags.
     * NOTE: Related to "exclude" and "pull" questions below.
   * Write/fix content for question about pulling blog posts with ALL included labels (`labels_op`)
-  * Wite/fix content for dynamic tags/labels via Custom Data
-    * NOTE: Not sure if this is possible yet as it uses get_page + r:articles:each
   * Right now, with blogs, it seems `tags` is the only operator that works (instead of `labels`). What are the chances of making `labels` work in blogs?
     * TODO: Update blog docs _back_ to `tags` if `labels` will not be included.
 
@@ -55,7 +53,7 @@ On the `{% assign articles %}` tag, include `labels_op: "all", labels: "admissio
 
 **Can I pull a list of blog posts onto another page, but have content authors specify which tags/labels to pull via the CleanSlate UI?**
 
-Yes. Specify [Custom Page Data](https://cleanslatecms.wvu.edu/how-to/theme-development/custom-data) for the page where you want to pull the posts, then use `r:set_var` and `r:get_page` to output the list. Here is a [code example for dynamic labels via the CleanSlate UI](#).
+Yes. Specify [Custom Page Data](https://cleanslatecms.wvu.edu/how-to/theme-development/custom-data) for the page where you want to pull the posts, then use `get_page` and `filter_articles` to output the list. Here is a [code example for dynamic labels via the CleanSlate UI](https://gist.github.com/wvuwebgist/29b9ba11dbede01dec7a10e5395ca30e).
 
 **Does CleanSlate have comments for blogs?**
 
