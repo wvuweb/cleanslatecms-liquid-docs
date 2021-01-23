@@ -4,9 +4,11 @@ A 1:1 translation of the documentation on https://cleanslatecms.wvu.edu/how-to/t
 
 ## How to name files
 
-In an effort to keep files organized similarly to how they are organized on CleanSlateCMS, each file name starts with a number divisible by 5. For example, `5-page-name-here.md`. Each file must start with a number like `5, 10, 15, 20, ...` followed by the name.
+In an effort to keep files organized similarly to how they are organized on CleanSlateCMS, each file name starts with a number divisible by 5. For example, `05-page-name-here.md`. Each file must start with a number like `05, 10, 15, 20, ...` followed by the name.
 
-If content is inside a folder, restart numbering at `5`.
+If content is inside a folder, restart numbering at `05`.
+
+If the folder has more than 19 child pages (eg: `95-page-name-here.md`), use a three digit prefix (eg: `095-page-name-here.md`).
 
 ## What is `index.md`?
 
