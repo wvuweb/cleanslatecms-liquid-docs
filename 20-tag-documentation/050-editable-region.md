@@ -26,14 +26,28 @@ You can add default content by using the `{% editable_region_block %}` tag:
 
 ### Examples:
 
+Standard editable region:
+
 ```
 {% editable_region name: "main" %}
 ```
+
+Simple editable region:
 
 ```
 {% editable_region name: "phone_number", type: "simple" %}
 ```
 
+Editable region with placeholder content:
+
 ```
 {% editable_region name: "sidebar-1", placeholder: "I will be default content." %}
+```
+
+Editable region block:
+
+```
+{% editable_region_block name: "region-name" %}
+  This is the default content in an editable region block.
+{% endeditable_region_block %}
 ```
