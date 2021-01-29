@@ -6,6 +6,8 @@ TODO:
 
 This tag is used to set a variable.
 
+The official Liquid documentation has a page dedicated to [variables](https://shopify.github.io/liquid/tags/variable/).
+
 ### Filter options
 
 `pluralize` - Takes a string and makes it singular or plural tense. Eg: test/tests, rule/rules, regular/irregular.
@@ -68,6 +70,12 @@ Here's a multiline example using capture:
 {% capture link_text %}
   <span class="sr-only">: {{ page.name }}</span>
 {% endcapture %}
+
+<!-- Then, use it: -->
+
+{{ link_text }}
 ```
 
-Please note: `capture` will not only capture the characters inside it, but also the spaces. This means these spaces will be part of your variable. You may consider using a filter like [`strip`](https://shopify.github.io/liquid/filters/strip/) to remove spaces depending on your use case.
+Please note: `capture` will not only capture the characters inside it, but also the spaces. This means these spaces will be part of your variable. You may consider using a filter like [`strip`](https://shopify.github.io/liquid/filters/strip/) to remove spaces depending on your use case. Another way to handle this would be to use [whitespace control](https://shopify.github.io/liquid/basics/whitespace/).
+
+The official Liquid documentation has a whole section dedicated to the [`capture` tag](https://shopify.github.io/liquid/tags/variable/#capture).
