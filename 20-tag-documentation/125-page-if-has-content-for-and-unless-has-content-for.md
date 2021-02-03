@@ -1,4 +1,4 @@
-#### `{% if page.content["my_region_name"] or edit_mode != blank %}`
+#### `{% if edit_mode or page.content["my_region_name"] != blank %}`
 
 This tag allows you to check if an editable region has content.
 
@@ -13,7 +13,7 @@ You must specify the name of an editable region to check via `page.content["my_r
 A good example for this tag is to check if there’s content in a sidebar on a page. If there’s not, don’t output the markup for the sidebar:
 
 ```
-{% if page.content["wvu-sidebar"] or edit_mode != blank %}
+{% if edit_mode or page.content["wvu-sidebar"] != blank %}
   <aside class="sidebar">
     {% editable_region name: "wvu-sidebar" %}
   </aside>
@@ -23,7 +23,7 @@ A good example for this tag is to check if there’s content in a sidebar on a p
 Another example is for student profiles. A student always has a major; however, a student doesn’t always have a minor. Here’s how to show a minor if they have one:
 
 ```
-{% if page.content["wvu-profile__minor"] or edit_mode != blank %}
+{% if edit_mode or page.content["wvu-profile__minor"] != blank %}
   <p>
     <strong>Minor: </strong>
     {% editable_region_block name: "wvu-profile__minor", type="simple" %}
@@ -49,3 +49,9 @@ You could similarly use this in a loop. For example, in a profile index page, yo
   {% endif %}
 {% endfor %}
 ```
+
+### FAQ
+
+#### Why put `edit_mode` before `page.content["xyz"]`?
+
+Short answer: performance. It's faster to check for `edit_mode` first, then check if there's content in a specific editable region versus the other way around.
