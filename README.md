@@ -25,3 +25,6 @@ Once you have the HTML, we'll be able to insert it into CleanSlate via the Edit 
 ## What about long code blocks?
 
 Long code blocks should use the [wvuwebgist](https://gist.github.com/wvuwebgist) Github account.
+
+Short code blocks should use [Prism.js](https://prismjs.com/). The [`cleanslate-site`](https://bitbucket.org/wvudigital/cleanslate-site) theme supports this library.
+
