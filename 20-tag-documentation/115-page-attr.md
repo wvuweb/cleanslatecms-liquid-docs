@@ -3,9 +3,8 @@
 TODO:
 
   * Attributes that don't exist yet: `link_class`, `link_target`, `link_title`, `link_value`(?)
-  * Is `content_updated_at` description correct?
-  * How does `page.parent` work/implemented? Need docs for this.
-  * `is_home_page?` doesn't return true or false when used with an object (`{{}}`). Should it?
+    * TODO: AJ test these attributes after Nathan pushes.
+  * `is_home_page?` doesn't return true or false when used with an object (`{{ page.is_home_page? }}`). Should it?
   * What is the `data_saved?` property and how do you use it?
   * How do you use `page.slots`? Need docs for this.
 
@@ -34,6 +33,8 @@ Use this tag to get properties about the current page (or current page in a loop
 `previous_sibling` - The previous sibling page.
 
 `next_sibling` - The next sibling page.
+
+`parent` - Access the parent page's properties (eg: `{{ page.parent.name }}`).
 
 `created_at` - The date the page was created (eg: `2018-05-09 18:02:22 -0400`)
 
