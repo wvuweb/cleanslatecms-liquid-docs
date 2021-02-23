@@ -1,4 +1,4 @@
-#### `{{ file.{attr} }}`
+#### `file.{attr}`
 
 TODO:
 
