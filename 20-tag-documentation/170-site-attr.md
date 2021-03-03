@@ -2,10 +2,7 @@
 
 TODO:
 
-  * Shore up docs for `first_random_image_tagged_with` and `background_styler`
-  * Shore up description for `root_page`.
   * Learn/write docs for `base_pages`
-  * Add example / link to docs for `get_file` and `files`.
 
 Use this tag to get properties about the current site, where {attr} is replaced by one of the attributes listed below.
 
@@ -21,19 +18,19 @@ Use this tag to get properties about the current site, where {attr} is replaced 
 
 `url`: Get the canonical URL for the site. Returns: `https://example.wvu.edu`
 
-`first_random_image_tagged_with` - Get a random image that has been tagged with the specified label.
+`first_random_image_tagged_with` - Get a random image that has been tagged with the specified label. See [Get a random image, file, or blog article](https://cleanslatecms.wvu.edu/how-to/theme-development/random-image-file-or-blog-article) for more information.
 
-`background_styler` - Add a background image via inline CSS. The background image must have a label and will be output with dimensions of 1780x1780.
+`background_styler` - Add a background image via inline CSS. The background image must have a label and will be output with dimensions of 1780x1780. See [Get a random image, file, or blog article](https://cleanslatecms.wvu.edu/how-to/theme-development/random-image-file-or-blog-article) for more information.
 
 `get_page` - Get a specific page via it's ID. See the documentation for [`get_page`](https://cleanslatecms.wvu.edu/how-to/theme-development/tag-index/r-get-page).
 
-`pages` - Returns an array of every page in your site.
+`pages` - Returns an array of every page in your site. See the documentation for [`r:page:{attr}`](https://cleanslatecms.wvu.edu/how-to/theme-development/tag-index/r-page).
 
 `base_pages` - ?
 
-`get_file` - Get a file via file ID. Find a file's ID by going to Files and hovering over the preview. The ID will show up in the `title` text.
+`get_file` - Get a file via file ID. Find a file's ID by going to Files and hovering over the preview. The ID will show up in the `title` text. See [`r:get_file`](https://cleanslatecms.wvu.edu/how-to/theme-development/tag-index/r-get-file) for more information on this tag.
 
-`files` - Get an array of all the files in a site.
+`files` - Get an array of all the files in a site. See the documentaiton for [`r:files`](https://cleanslatecms.wvu.edu/how-to/theme-development/tag-index/r-files-attr).
 
 `data` - Access Custom Site Data. See our documentation for [Custom Site Data](https://cleanslatecms.wvu.edu/how-to/theme-development/custom-data#custom-site-data).
 
