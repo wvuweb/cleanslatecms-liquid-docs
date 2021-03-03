@@ -7,7 +7,6 @@ TODO:
     * https://github.com/wvuweb/cleanslate/blob/dev/app/lib/slate/liquid/drops/file_drop.rb#L6
   * Consider making both `label` AND `tag` work with `first_random_image_tagged_with`:
     * https://github.com/wvuweb/cleanslate/blob/dev/app/lib/slate/liquid/filters/file_filters.rb#L31
-  * FIX: `get_file` - 100% incorrect
 
 This tag references individual files and will always be used inside a [`files.{attr}`](https://cleanslatecms.wvu.edu/how-to/theme-development/tag-index/r-files-attr) loop.
 
@@ -49,7 +48,7 @@ This tag references individual files and will always be used inside a [`files.{a
 
 `first_random_image_tagged_with` - Get the first random image tagged with a specific label. See example below.
 
-`get_file` - Get a specific file by targeting it's ID. Eg: `{{ file | get_file: id: "1234" }}`
+`get_file` - Get a specific file by targeting it's ID. See example below.
 
 ### Examples
 
@@ -109,6 +108,13 @@ Get the first random image tagged with a label:
 ```
 {% assign my_random_image = site | first_random_image_tagged_with: label: "backpage-1-thumbnail", limit: 1, types: "image", random: true %}
 <img src="{{ my_random_image | image_url: size: "300x" }}" alt="{{ my_random_image.alt_text }}" />
+```
+
+Get a file based off of a file ID:
+
+```
+{% assign myFile = site | get_file: 1234 %} <!-- 👈 Change to your file's ID -->
+<p><a download href="{{ myFile.download_url }}">Download {{ myFile.title }}</a></p>
 ```
 
 Loop through files labelled with `download`, `wvu`, or `profile` and return their properties:
