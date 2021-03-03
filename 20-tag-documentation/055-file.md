@@ -47,7 +47,7 @@ This tag references individual files and will always be used inside a [`files.{a
 Loop through files labelled with `download`, `wvu`, or `profile` and return their properties:
 
 ```
-{% assign files = site.files | filter_files: tags: "download,wvu,profile", types: ", tags_match: "any", order: "uploaded_at" %}
+{% assign files = site.files | filter_files: tags: "download,wvu,profile", types: "", tags_match: "any", order: "uploaded_at" %}
 <ul class="files">
   {% for file in files.all %}
     <li class="span4">

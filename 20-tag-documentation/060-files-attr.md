@@ -32,7 +32,7 @@ The `files` tag uses a parent `filter_files` filter that takes the following arg
 ### Examples
 
 ```
-{% assign files = site.files | filter_files: tags: 'download,wvu,profile', types: '', tags_match: 'any', order: 'uploaded_at', limit: 5, offset: params.page %}
+{% assign files = site.files | filter_files: tags: "download,wvu,profile", types: "", tags_match: "any", order: "uploaded_at", limit: 5, offset: params.page %}
 <ul class="files">
   {% for file in files.all %}
     <li class="span4">
@@ -41,7 +41,7 @@ The `files` tag uses a parent `filter_files` filter that takes the following arg
       <small>({{ file.filename }} uploaded {{ file.uploaded_at | date: "%Y-%m-%d" }})</small>
       <p>
         {% if file.is_image %}
-          <img src="{{ file | image_url: size: '250x' }}" /> <br/>
+          <img src="{{ file | image_url: size: "250x" }}" /> <br/>
           Original Image Dimensions: {{ file.image_dimensions }} <br/>
           Image Path: {{ file | image_path }} <br/>
           Image URL: {{ file | image_url }}
