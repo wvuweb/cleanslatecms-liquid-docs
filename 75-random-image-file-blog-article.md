@@ -15,7 +15,7 @@ As an image tag in HTML:
 ```
 {% assign randomImage = site | first_random_image_tagged_with: label: "backpage-1-thumbnail", limit: 1, types: "image", random: true %}
 {% assign randomImage_url = randomImage | image_url: size: "1200x630" %}
-<img src="{{ randomImage_url }}" alt="ALT TEXT GOES HERE: {{ randomImage.alt_text }}">
+<img src="{{ randomImage_url }}" alt="{{ randomImage.alt_text }}">
 ```
 
 …Or inline as a random background image on a `div`:
