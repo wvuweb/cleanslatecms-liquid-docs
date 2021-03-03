@@ -17,7 +17,7 @@ The `files` tag uses a parent `filter_files` filter that takes the following arg
 
 `tags_match` - Specify `any`, `all` or `none` as to how to match which of the referenced labels. `any` means any file with any one of the labels. `all` means the file must have every label specified in the list. `none` means files that _don't_ have the specified labels.
 
-`order` - The order you want to display the files. Valid values are: `name`, `title`, `alt_text`, `description`, `size`, `uploaded_at`
+`order` - The order you want to display the files. Valid values are: `name`, `title`, `alt_text`, `description`, `size` and `uploaded_at`.
 
 `title` - Specify the title of a file or files you want to filter by.
 
@@ -30,6 +30,22 @@ The `files` tag uses a parent `filter_files` filter that takes the following arg
 `limit`  - Limit the number of files output by the loop. Value: integer. Default: 50.
 
 ### Examples
+
+Output linked images based off of a label via a page slug:
+
+```
+{% capture gallerypage %}{{ page.slug }}-gallery{% endcapture %}
+{% assign images = site.files | filter_files: tags: gallerypage, types: "image" %}
+{% for image in images.all %}
+  <div class="image-container">
+    <a href="{{ image | image_url: size: "960x640" }}" title="{{ image.description }}">
+      <img src="{{ image | image_url: size: "480x320" }}" alt="{{ image.alt_text }}" />
+    </a>
+  </div>
+{% endfor %}
+```
+
+Output a list of files with links. If the file is an image, output the image to an image tag along with the image path and URL:
 
 ```
 {% assign files = site.files | filter_files: tags: "download,wvu,profile", types: "", tags_match: "any", order: "uploaded_at", limit: 5, offset: params.page %}
