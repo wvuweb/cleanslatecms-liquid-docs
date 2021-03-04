@@ -1,9 +1,5 @@
 #### `site.{attr}`
 
-TODO:
-
-  * Learn/write docs for `base_pages`
-
 Use this tag to get properties about the current site, where {attr} is replaced by one of the attributes listed below.
 
 ### Attribute options
@@ -26,7 +22,7 @@ Use this tag to get properties about the current site, where {attr} is replaced 
 
 `pages` - Returns an array of every page in your site. See the documentation for [`r:page:{attr}`](https://cleanslatecms.wvu.edu/how-to/theme-development/tag-index/r-page).
 
-`base_pages` - ?
+`base_pages` - Get an array of the pages at the top/root level of a site.
 
 `get_file` - Get a file via file ID. Find a file's ID by going to Files and hovering over the preview. The ID will show up in the `title` text. See [`r:get_file`](https://cleanslatecms.wvu.edu/how-to/theme-development/tag-index/r-get-file) for more information on this tag.
 
@@ -59,6 +55,19 @@ Get a specific page using `get_page`:
 {% for page in pages.all %}
   <p>{{ page.name }}</p>
 {% endfor %}
+```
+
+Make a list of all pages at the top level of a site:
+
+```
+{% assign rootPages = site.base_pages %}
+<ul>
+  {% for page in rootPages.all %}
+    <li>
+      <a href="{{ page.url }}">{{ page.name }}</a>
+    </li>
+  {% endfor %}
+</ul>
 ```
 
 Get one random page that has any of the following labels:
