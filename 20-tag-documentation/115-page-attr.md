@@ -26,7 +26,7 @@ Use this tag to get properties about the current page (or current page in a loop
 
 `alternate_name` - Get the alternate name as listed in Page Properties.
 
-`depth` - The depth of the page relative to the root level.
+`depth` - The depth of the page relative to the root level. Numbering starts at `1`.
 
 `previous_sibling` - The previous sibling page.
 
