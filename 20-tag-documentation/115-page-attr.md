@@ -50,6 +50,8 @@ Use this tag to get properties about the current page (or current page in a loop
 
 `tags` - The labels/tags associated with a page. Multiple labels/tags return as a comma separated list without spaces (eg: `a-label,featured,test-bears-label`)
 
+`tags_match` - Specify `any`, `all` or `none` as to how to match which of the referenced labels. `any` means any page with any one of the labels. `all` means the page must have every label specified in the list. `none` means pages that _don't_ have the specified labels.
+
 `data` - Gets the [Custom Page Data](https://cleanslatecms.wvu.edu/how-to/theme-development/custom-data) associated with the current page. (eg: `page.data.show_awesome_feature` or `page.data["show_awesome_feature"]`)
 
 `data_saved?` - Checks if custom page data has ever been saved/set for the current page. Often [used with `unless` to assign values to variables](https://bitbucket.org/wvudigital/ur-apartments/src/d66cab71c12dfaf5f2bea02164a2cb6752ed58b8/views/includes/_wvu-component-footer.html#lines-3:9) if no values are present.
