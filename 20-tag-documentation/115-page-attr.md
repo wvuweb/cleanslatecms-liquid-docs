@@ -5,8 +5,6 @@ TODO:
   * Attributes that don't exist yet: `link_class`, `link_target`, `link_title`, `link_value`(?)
     * TODO: AJ test these attributes after Nathan pushes.
   * `is_home_page?` doesn't return true or false when used with an object (`{{ page.is_home_page? }}`). Should it?
-  * What is the `data_saved?` property and how do you use it?
-  * How do you use `page.slots`? Need docs for this.
 
 Use this tag to get properties about the current page (or current page in a loop), where {attr} is replaced by one of the attributes listed below.
 
@@ -54,6 +52,8 @@ Use this tag to get properties about the current page (or current page in a loop
 
 `data` - Gets the [Custom Page Data](https://cleanslatecms.wvu.edu/how-to/theme-development/custom-data) associated with the current page. (eg: `page.data.show_awesome_feature` or `page.data["show_awesome_feature"]`)
 
+`data_saved?` - Checks if custom page data has ever been saved/set for the current page. Often [used with `unless` to assign values to variables](https://bitbucket.org/wvudigital/ur-apartments/src/d66cab71c12dfaf5f2bea02164a2cb6752ed58b8/views/includes/_wvu-component-footer.html#lines-3:9) if no values are present.
+
 `is_home_page?` - Tests if the page is the home page. Used with `if` tags (eg: `if page.is_home_page?`)
 
 `descendants` - Get all pages under the current page, no matter the level. This page drop is most often used with a loop (eg: `page.descendants` or `page.descendants.first`). Returns an array.
@@ -63,6 +63,8 @@ Use this tag to get properties about the current page (or current page in a loop
 `children` - Get all the pages directly under the current page. This page drop is most often used with a loop. Returns an array.
 
 `siblings` - Get all the pages at the current level. This page drop is most often used with a loop. Returns an array.
+
+`slots` - Slots are a functionality specific to something colloquially called "Super Theme". See an implementation of slots in the [UR Apartments theme](https://bitbucket.org/wvudigital/ur-apartments/src/liquid/views/utilities/_wvu-slots.html). Slots can be a drag on your site's performance, so we recommend only using them when creating a custom template is not feasible.
 
 Note: `<r:page:first_non_blank_attr />` has been replaced by the `default` filter. Eg: `{{ page.alternate_name | default: page.name }}`.
 
