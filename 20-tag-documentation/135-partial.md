@@ -1,6 +1,8 @@
 #### `{% render %}`
 
-Include a partial in your theme.
+Include a partial in your theme. A partial is a file with code in it. 
+
+All partials must start with an underscore (eg: `_my-file-name.html`) to differentiate them from templates.
 
 ### Attribute options
 
