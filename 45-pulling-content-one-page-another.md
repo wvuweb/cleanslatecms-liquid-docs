@@ -4,7 +4,6 @@ TODO:
 
   * Change CSTDTS YouTube video from the Radius version to Liquid (when it gets made) & include video label.
   * Insert Gists as noted below (see **NOTE:**'s)
-  * Update Note #1 at the bottom of the page on the Radius version of the docs to elaborate a bit more about shared profiles.
 
 In CleanSlate, it’s possible to have content live on one page of your site and pull that content to other parts of your site.
 

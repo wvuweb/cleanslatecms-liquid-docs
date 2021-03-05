@@ -2,11 +2,7 @@
 
 TODO:
 
-  * Update radius docs, step by step #2. `hidePartial` should be `showPartial` in step #2.
   * When converting to HTML and pasting into Mercury, ensure the proper formatting of the ordered list (specifically, the code blocks).
-  * Move final paragraph about "opt-in" functionality to the "Hide by default" recipe in the Radius docs.
-  * Fix "Whats's" to "What's" in radius docs (at least 2x)
-  * Fix "Recipies" to "Recipes" in radius docs.
 
 Combining `if` statements with [Custom Page Data](https://cleanslatecms.wvu.edu/how-to/theme-development/custom-data) can yield powerful results. This how-to covers the following topics:
 

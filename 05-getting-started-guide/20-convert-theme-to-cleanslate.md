@@ -3,17 +3,13 @@
 TODO:
 
   * Link to the liquid version of the "Tag Index".
-  * Add note about Radius + Liquid templating languages (3rd paragraph on this page) to Radius docs.
   * NOTE: omitted the theme conversion screencast. Maybe make a new one and add it here?
-  * Properly case "JavaScript" vs "javascript" in Radius docs.
-  * Double check code for pulling an image in a theme's `images` directory via Liquid (`theme_image_url`) to make sure this works.
-  * Update Radius docs from "sitewide" to "site wide"
 
 CleanSlate uses a template language called [Liquid](https://shopify.github.io/liquid/). Therefore, all tags will look something like `{% my_tag %}` or `{{ my.tag }}`.
 
 A company called Shopify created Liquid. Shopify has a number of learning resources available. One that is particularly helpful is this 28 minute [Overview of Liquid](https://www.youtube.com/watch?v=-ihFPNcSkT4) video on YouTube. While not everything will translate 100% to CleanSlate, it will give you a good understanding of the core language and how it's used. For a more in-depth description of the various tags available, visit the [Tag Index](https://cleanslatecms.wvu.edu/how-to/theme-development/tag-index).
 
-<p style="font-size: .8rem;"><strong>NOTE:</strong> CleanSlate actually supports two templating languages: Radius and Liquid. As of 2021, Liquid has taken over as the dominant templating language because it's far more performant than Radius. The Radius templating language will be depreciated in the future. All themes moving forward should use Liquid.</p>
+<p style="font-size: .8rem;"><strong>NOTE:</strong> CleanSlate actually supports two templating languages: Radius and Liquid. As of 2021, Liquid is the recommended templating language because it's far more performant than Radius. The Radius templating language will be depreciated in the future. Themes should use Liquid moving forward.</p>
 
 ## It's dangerous to go alone! Take this.
 

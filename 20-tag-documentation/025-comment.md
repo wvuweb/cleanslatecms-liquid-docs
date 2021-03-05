@@ -1,5 +1,3 @@
-# r:comment
-
 #### `{% comment %}`
 
 Include a comment in your theme that can't be seen in HTML.

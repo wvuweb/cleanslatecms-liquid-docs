@@ -1,9 +1,5 @@
 #### `page.previous_sibling` and `page.next_sibling`
 
-TODO:
-
-  * Remove the last "NOTE:" about sort order since sort order is now hidden in the UI to everyone except super admins.
-
 In CleanSlate, it is possible to access the previous and next pages relevant to the current page, based on page ordering, with the  `page.previous_sibling` and `page.next_sibling` tags.
 
 For example, you could create a pager to navigate through a set of sibling pages as follows:

@@ -1,9 +1,5 @@
 #### `{% theme_image_url %}`
 
-TODO:
-
-  * Reformat radius docs for this tag as they're not congruent with the rest of of the tag doc's formatting.
-
 Gets the relative path to an image in your theme's `images` directory. It will include the current ten digit cache string (eg: `1234567890`).
 
 **NOTE:** All images used with this tag must reside in a directory called `images` (not `img` or any other variant of the word).

@@ -1,10 +1,5 @@
 # If statement expressions
 
-TODO:
-
-  * In Radius docs, link "custom site data value".
-  * Change "Contains code examples" h2 to "`contains` code examples" in radius docs.
-
 CleanSlate allows us to use expressions inside `if` and `unless` tags. Expressions can be used to check:
 
   * if a value is blank

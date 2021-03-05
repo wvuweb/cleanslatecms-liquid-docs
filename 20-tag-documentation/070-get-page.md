@@ -1,10 +1,5 @@
 #### `get_page`
 
-TODO:
-
-  * Update paragraph two in Radius docs ("This tag is useful").
-  * Update order of Attribute Options vs Example headings
-
 Target a certain page by via ID. Most often used within a loop.
 
 This tag is useful for pulling navigation into a different page on your site, pulling content from other pages or pulling student/staff profiles onto a homepage (likely in tandem with a `for` loop), among many other uses.

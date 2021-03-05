@@ -3,7 +3,6 @@
 TODO:
 
   * Change CSTDTS YouTube videos (2!) from the Radius versions to Liquid (when they get made).
-  * Update "Tag Documentation" links in Radius docs to be unique (#a11y)
 
 Templates can be pretty powerful. They give you the ability to make your site dynamic, allowing what is displayed to change based upon user interaction, content, and other factors.
 
