@@ -1,10 +1,5 @@
 #### `{% files.{attr} %}`
 
-TODO:
-
-  * Check `types` values to see if they are correct.
-  * Check `order` to make sure values are correct and there are not any others.
-
 A tag used to loop through files like images, PDF's, audio files and more.
 
 ### Files Filters

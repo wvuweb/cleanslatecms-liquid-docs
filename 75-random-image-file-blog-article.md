@@ -1,9 +1,5 @@
 # Get a random image, file, or blog article
 
-TODO:
-
-  * Make note on Radius page content about cache after 1st paragraph.
-
 It’s possible to have CleanSlate generate a random image, file, or blog article. This can be useful for changing background images on a hero element, getting a random blog post to display on your site’s homepage, or for getting a random page from within your site. CleanSlate will generate a new random image, file, or blog article every 30 seconds.
 
 **NOTE:** While CleanSlate will generate a random image, file or article every 30 seconds, most often [the cache](https://cleanslatecms.wvu.edu/how-to/content-publishing/basic-editing/editing-content/cache) "catches" the page and will serve up the same item until the cache refreshes (about every 10 minutes). If you want true random item functionality, use JavaScript.
