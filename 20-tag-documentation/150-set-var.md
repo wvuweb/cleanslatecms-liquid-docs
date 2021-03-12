@@ -1,9 +1,5 @@
 #### `{% assign %}` & `{% capture %}`
 
-TODO:
-
-  * Write docs for `css_background_image`.
-
 This tag is used to set a variable.
 
 The official Liquid documentation has a page dedicated to [variables](https://shopify.github.io/liquid/tags/variable/).
@@ -12,7 +8,7 @@ The official Liquid documentation has a page dedicated to [variables](https://sh
 
 `pluralize` - Takes a string and makes it singular or plural tense. Eg: test/tests, rule/rules, regular/irregular.
 
-`css_background_image` - TODO: What does this filter do?
+`css_background_image` - A filter to output a string as a background image, eg: `background-image: url(https://example.wvu.edu/files/24271fb1-0561-4e5d-a750-0c0fdb44985d/1780x1780?cb=1614116587)`. 
 
 `to_boolean` - Converts a string to a boolean value (`true` or `false`).
 
@@ -74,6 +70,22 @@ Here's a multiline example using capture:
 <!-- Then, use it: -->
 
 {{ link_text }}
+```
+
+Here's how to get two different background images using `css_background_image`:
+
+```
+{% liquid
+  assign background_image_small = site | first_random_image_tagged_with: label: "backpage-1-thumbnail" | image_url: size: "1780x580" | css_background_image
+  assign background_image_large = site | first_random_image_tagged_with: label: "backpage-1-thumbnail" | image_url: size: "1780x1780" | css_background_image
+%}
+<!-- Then, use it: -->
+<div style="{{ background_image_small }}"></div>
+<div style="{{ background_image_large }}"></div>
+
+<!-- Outputs: -->
+<div style="background-image: url(https://example.wvu.edu/files/24271fb1-0561-4e5d-a750-0c0fdb44985d/1780x580?cb=1614116587)"></div>
+<div style="background-image: url(https://example.wvu.edu/files/24271fb1-0561-4e5d-a750-0c0fdb44985d/1780x1780?cb=1614116587)"></div>
 ```
 
 Please note: `capture` will not only capture the characters inside it, but also the spaces. This means these spaces will be part of your variable. You may consider using a filter like [`strip`](https://shopify.github.io/liquid/filters/strip/) to remove spaces depending on your use case. Another way to handle this would be to use [whitespace control](https://shopify.github.io/liquid/basics/whitespace/).
