@@ -8,7 +8,7 @@ This tag outputs site breadcrumbs in an unordered list.
 
 `ul_class: "your-class"` - The class that the unordered list should have.
 
-`link_class: "your-anchor-class"` - Apply classes to each anchor tag (<a>) in the unordered list.
+`link_class: "your-anchor-class"` - Apply classes to each anchor tag (`<a>`) in the unordered list.
 
 `include_link_ids: "false"` - Boolean. Default value: `false`. Enables/disables output of ID's set via the Link Attributes tab in Page Properties on anchor tags (`<a>`).
 
