@@ -3,7 +3,6 @@
 TODO:
 
   * Change CSTDTS YouTube video from the Radius version to Liquid (when it gets made).
-  * Should we rename this page to, "...'layouts', 'r:yield' and 'TEMPLATE_CONTENT'"?"
 
 Layouts are a new way of organizing your theme. The concept was born from the structure of [Rails](http://rubyonrails.org/) applications. The goal is to modularize your code and keep it DRY'er.
 
