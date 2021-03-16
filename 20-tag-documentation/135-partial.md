@@ -31,8 +31,8 @@ If you want to set multiple variables, separate each variable statement with a c
 The following will _NOT_ work:
 
 ```
-<!-- ❌ Doesn't (and will never) work: ❌ -->
-{% assign bears = "We love bears!" %}
+<!-- Doesn't (and will never) work: -->
+{% assign bears = "We love bears!" %}  ⤵ 🚫
 {% render "custom-patterns/all-about-bears" %}
 ```
 
