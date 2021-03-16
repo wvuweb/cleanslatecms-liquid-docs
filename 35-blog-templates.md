@@ -18,7 +18,7 @@ Yes. Say, for example, you had different authors and you wanted a bio to appear 
 
 **How do I pull articles from my blog onto my site's homepage?**
 
-Do this using the [r:blog tag](https://gist.github.com/wvuwebgist/d149c22aed588af4a05407832c9e2c5d) by passing it a blog ID. Note: this pulls blog articles from the same site—not from a different site.
+Do this using the [blog.articles tag](https://gist.github.com/wvuwebgist/d149c22aed588af4a05407832c9e2c5d) by passing it a blog ID. Note: this pulls blog articles from the same site—not from a different site.
 
 **How do I pull blog articles from a different site?**
 
