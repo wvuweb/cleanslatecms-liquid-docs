@@ -26,6 +26,14 @@ This outputs the site navigation in an unordered list, starting at the root leve
 
 ### Example:
 
+Most used attributes:
+
+```
+{% site_menu ul_class: "some-class", li_class: "some-li-class", link_class: "some-a-class", max_depth: "1", active_class: "active" %}
+```
+
+All attributes:
+
 ```
 {% site_menu ul_class: "some-class", ul_id: "some-id", li_class: "some-li-class", link_class: "some-a-class", max_depth: "1", active_class: "active", open_class: "open", has_children_class: "your-class", sub_ul_class: "your-submenu-class", include_link_ids: "true" %}
 ```
