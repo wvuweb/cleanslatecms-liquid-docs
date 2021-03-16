@@ -18,4 +18,4 @@ Until 2021, CleanSlate ran 100% on the Radius templating language. As themes bec
 
 In late 2020, WVU implemented the Liquid templating language to work with CleanSlate. We immediately noticed **performance increases of 80-90%** in themes we converted from Radius to Liquid. Page loads that once took 8 seconds were now less than a second.
 
-Moving forward, all new themes should use the Liquid templating language in an effort to maximize performance and to minimize resource drain on the entire system. This is good for your users and good for WVU.
+Starting mid-summer 2021, all new themes should use the Liquid templating language in an effort to maximize performance and to minimize resource drain on the entire system. This is good for your users and good for WVU.
