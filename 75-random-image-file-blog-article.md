@@ -9,7 +9,7 @@ It’s possible to have CleanSlate generate a random image, file, or blog articl
 As an image tag in HTML:
 
 ```
-{% assign randomImage = site | first_random_image_tagged_with: label: "backpage-1-thumbnail", limit: 1, types: "image", random: true %}
+{% assign randomImage = site | first_random_image_tagged_with: tag: "backpage-1-thumbnail" %}
 {% assign randomImage_url = randomImage | image_url: size: "1200x630" %}
 <img src="{{ randomImage_url }}" alt="{{ randomImage.alt_text }}">
 ```

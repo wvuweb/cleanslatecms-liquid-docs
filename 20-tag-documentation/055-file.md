@@ -55,7 +55,7 @@ This tag references individual files and will always be used inside a [`files.{a
 Get a random image based on a label:
 
 ```
-{% assign randomImage = site | first_random_image_tagged_with: label: "backpage-1-thumbnail", limit: 1, types: "image", random: true %}
+{% assign randomImage = site | first_random_image_tagged_with: tag: "backpage-1-thumbnail" %}
 {% assign randomImage_url = randomImage | image_url: size: "1200x630" %}
 <img src="{{ randomImage_url }}" alt="{{ randomImage.alt_text }}">
 ```
@@ -64,7 +64,7 @@ Get a random image based on a label:
 
 ```
 {% assign page_slug_label = page.slug | append: "-thumbnail" %}
-{% assign randomImage = site | first_random_image_tagged_with: label: page_slug_label, limit: 1, types: "image", random: true %}
+{% assign randomImage = site | first_random_image_tagged_with: tag: page_slug_label %}
 {% assign randomImage_url = randomImage | image_url: size: "1200x630" %}
 <img src="{{ randomImage_url }}" alt="{{ randomImage.alt_text }}">
 ```
@@ -106,7 +106,7 @@ Background styler example:
 Get the first random image tagged with a label:
 
 ```
-{% assign my_random_image = site | first_random_image_tagged_with: label: "backpage-1-thumbnail", limit: 1, types: "image", random: true %}
+{% assign my_random_image = site | first_random_image_tagged_with: tag: "backpage-1-thumbnail" %}
 <img src="{{ my_random_image | image_url: size: "300x" }}" alt="{{ my_random_image.alt_text }}" />
 ```
 

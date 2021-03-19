@@ -76,8 +76,8 @@ Here's how to get two different background images using `css_background_image`:
 
 ```
 {% liquid
-  assign background_image_small = site | first_random_image_tagged_with: label: "backpage-1-thumbnail" | image_url: size: "1780x580" | css_background_image
-  assign background_image_large = site | first_random_image_tagged_with: label: "backpage-1-thumbnail" | image_url: size: "1780x1780" | css_background_image
+  assign background_image_small = site | first_random_image_tagged_with: tag: "backpage-1-thumbnail" | image_url: size: "1780x580" | css_background_image
+  assign background_image_large = site | first_random_image_tagged_with: tag: "backpage-1-thumbnail" | image_url: size: "1780x1780" | css_background_image
 %}
 <!-- Then, use it: -->
 <div style="{{ background_image_small }}"></div>
