@@ -5,8 +5,6 @@ TODO:
   * Is 👇 correct?
   * Consider adding `svg` to the `CONTENT_READABLE_FILE_EXT`:
     * https://github.com/wvuweb/cleanslate/blob/dev/app/lib/slate/liquid/drops/file_drop.rb#L6
-  * Consider making both `label` AND `tag` work with `first_random_image_tagged_with`:
-    * https://github.com/wvuweb/cleanslate/blob/dev/app/lib/slate/liquid/filters/file_filters.rb#L31
 
 This tag references individual files and will always be used inside a [`files.{attr}`](https://cleanslatecms.wvu.edu/how-to/theme-development/tag-index/r-files-attr) loop.
 
