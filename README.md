@@ -1,6 +1,8 @@
 # CleanSlate CMS Liquid Docs
 
-A 1:1 translation of the documentation on https://cleanslatecms.wvu.edu/how-to/theme-development from the Radius templating language to Liquid.
+![Screenshot of tabs on CleanSlateCMS.wvu.edu](https://raw.githubusercontent.com/wvuweb/cleanslatecms-liquid-docs/main/00-images/cscms-liquid-tab.jpg)
+
+A 1:1 translation of the documentation on CleanSlate CMS's [Theme Development docs](https://cleanslatecms.wvu.edu/how-to/theme-development) from the Radius templating language to Liquid. This documentation is now live on the CleanSlate CMS site. Users should use the site as the canonical resource for CleanSlate documentation.
 
 ## How to name files
 
@@ -27,4 +29,3 @@ Once you have the HTML, we'll be able to insert it into CleanSlate via the Edit 
 Long code blocks should use the [wvuwebgist](https://gist.github.com/wvuwebgist) Github account.
 
 Short code blocks should use [Prism.js](https://prismjs.com/). The [`cleanslate-site`](https://bitbucket.org/wvudigital/cleanslate-site) theme supports this library.
-
